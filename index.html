@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="carrossel" id="carrossel">
+        <div class="coitaner" id="img">
+            <img src="assets/img/bannerlagoa.jpg" alt="lagoa">
+            <img src="assets/img/bannerlagoa2.jpg" alt="lagoa">
+            <img src="assets/img/bannerlagoa3.jpg" alt="lagoa">
+        </div>
+    </div>
+    <script type="text/javascript">
+const imgs = document.getElementById("img")
+const img = document.querySelectorAll("#img img")
+
+let idx = 0;
+
+function carrossel(){
+    idx++;
+
+    if(idx > img.lenght - 1){
+        idx = 0;
+    }
+
+    imgs.style.transform = `translateX(${-idx * 920} px)`;
+}
+
+setInterval(carrossel, 1800);
+
+    </script>
+</body>
+</html>

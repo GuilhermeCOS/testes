@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.carrossel{
+    box-shadow: 2px 2px 4px;
+    overflow: hidden;
+    height: 228px;
+    width: 920px;
+}
+
+.container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+img{
+    object-fit: cover;
+    height: 228px;
+    width: 920px;
+}
